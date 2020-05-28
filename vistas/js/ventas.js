@@ -197,7 +197,7 @@ $(".tablaVentas tbody").on("click", "button.agregarProducto", function(){
 
                         '<span class="input-group-addon"><i class="ion ion-social-usd"></i></span>' +
                         
-                        '<input type="number" min="1" class="form-control nuevoPrecioProducto" precioReal="'+precio+'" name="nuevoPrecioProducto" value="'+precio+'" readonly required>' +
+                        '<input type="text" class="form-control nuevoPrecioProducto" precioReal="'+precio+'" name="nuevoPrecioProducto" value="'+precio+'" readonly required>' +
         
                     '</div>' +
                 
@@ -212,6 +212,9 @@ $(".tablaVentas tbody").on("click", "button.agregarProducto", function(){
 
             //Agregar Impuesto
             agregarImpuesto();
+
+            //Poner Formato al Precio de los Productos
+            $(".nuevoPrecioProducto").number(true, 2);
         }
             
     });
@@ -303,7 +306,7 @@ $(".btnAgregarProducto").click(function() {
     
                             '<span class="input-group-addon"><i class="ion ion-social-usd"></i></span>' +
                             
-                            '<input type="number" min="1" class="form-control nuevoPrecioProducto" precioReal="" name="nuevoPrecioProducto" readonly required>' +
+                            '<input type="text" class="form-control nuevoPrecioProducto" precioReal="" name="nuevoPrecioProducto" readonly required>' +
             
                         '</div>' +
                     
@@ -329,6 +332,10 @@ $(".btnAgregarProducto").click(function() {
 
             //Agregar Impuesto
             agregarImpuesto();
+
+            //Poner Formato al Precio de los Productos
+            $(".nuevoPrecioProducto").number(true, 2);
+           
         }
 
     });   
@@ -449,3 +456,8 @@ $("#nuevoImpuestoVenta").change(function() {
     agregarImpuesto(); 
     
 });
+
+/*--=================================================
+        PONER FORMATO AL PRECIO FINAL
+=================================================--*/
+$("#nuevoTotalVenta").number(true, 2);
