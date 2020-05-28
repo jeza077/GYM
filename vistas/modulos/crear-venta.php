@@ -146,7 +146,7 @@
                 BOTÓN PARA AGREGAR PRODUCTO
                 ======================================-->
                  <!-- LO UTILIZAREMOS CUANDO ESTE EN DISPOSITIVOS PEQUEÑOS COMO CELULARES -->
-                <button type="button" class="btn btn-default hidden-lg">Agregar producto</button>
+                <button type="button" class="btn btn-default hidden-lg btnAgregarProducto">Agregar producto</button>
 
                 <hr>
 
