@@ -22,7 +22,7 @@ class ControladorVentas{
 
         if(isset($_POST["nuevaVenta"])){
 
-            //Actualizar compras del cliente y Reducir el Stock y Aumentar las Ventas de los Productos
+            //----Actualizar compras del cliente y Reducir el Stock y Aumentar las Ventas de los Productos---//
             $listaProductos = json_decode($_POST["listaProductos"], true);
 
             $totalProductosComprados = array();
@@ -49,15 +49,24 @@ class ControladorVentas{
             }
 
             $tablaClientes = "clientes";
+
             $item = "id";
             $valor = $_POST["seleccionarCliente"];
 
             $traerCliente = ModeloClientes::mdlMostrarClientes($tablaClientes, $item, $valor);
 
-            $item1 = "compras";
-            $valor1 = array_sum($totalProductosComprados) + $traerCliente["compras"];
 
-            $comprasCliente = ModeloClientes::mdlActualizarCliente($tablaClientes, $item1, $valor1, $valor);
+            $item1a = "compras";
+            $valor1a = array_sum($totalProductosComprados) + $traerCliente["compras"];
+
+            $comprasCliente = ModeloClientes::mdlActualizarCliente($tablaClientes, $item1a, $valor1a, $valor);
+
+            $item1b = "ultima_compra";
+            $fecha = date('Y-m-d');
+            $hora = date('H:i:s');
+            $valor1b = $fecha.' '.$hora;
+
+            $comprasCliente = ModeloClientes::mdlActualizarCliente($tablaClientes, $item1b, $valor1b, $valor);
 
             //----GUARDAR LA COMPRA ---//
 
