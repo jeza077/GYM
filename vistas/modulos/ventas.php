@@ -55,27 +55,51 @@
         </thead>
 
         <tbody>
-          
-          <tr>
-            <td>1</td>
-            <td>1000123</td>
-            <td>Juan Zuniga</td>
-            <td>Jesus Amador</td>
-            <td>TC-1235488889</td>
-            <td>L. 1,000.00</td>
-            <td>L. 1,190.00</td> 
-            <td>2020-01-02 12:05:32</td>
 
-            <td>
-                <div class="btn-group">
-                    
-                  <button class="btn btn-info"><i class="fa fa-print"></i></button>
+        <?php 
 
-                  <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+          $item = null;
+          $valor = null;
 
-                </div>  
-            </td>
-          </tr>
+          $respuesta = ControladorVentas::ctrMostrarVentas($item, $valor);
+
+          foreach ($respuesta as $key => $value) {
+            
+            echo '<tr>
+                    <td>'.($key+1).'</td>
+                    <td>'.$value["codigo"].'</td>';
+
+                    $itemCliente = "id";
+                    $valorCliente = $value["id_cliente"];
+
+                    $respuestaCliente = ControladorClientes::ctrMostrarClientes($itemCliente, $valorCliente);
+
+                    echo '<td>'.$respuestaCliente["nombre"].'</td>';
+
+                    $itemUsuario = "id";
+                    $valorUsuario = $value["id_vendedor"];
+
+                    $respuestaUsuario = ControladorUsuarios::ctrMostrarUsuarios($itemUsuario, $valorUsuario);
+
+                    echo '<td>'.$respuestaUsuario["nombre"].'</td>
+                    <td>'.$value["metodo_pago"].'</td>
+                    <td>$ '.number_format($value["neto"], 2).'</td>
+                    <td>$ '.number_format($value["total"], 2).'</td> 
+                    <td>'.$value["fecha"].'</td>
+
+                    <td>
+                        <div class="btn-group">
+                            
+                          <button class="btn btn-info"><i class="fa fa-print"></i></button>
+
+                          <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+
+                        </div>  
+                    </td>
+                  </tr>';
+          }
+
+        ?>
 
         </tbody>
 
