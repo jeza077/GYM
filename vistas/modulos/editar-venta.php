@@ -175,7 +175,7 @@
             
                                     <span class="input-group-addon"><i class="ion ion-social-usd"></i></span> 
                                     
-                                    <input type="text" class="form-control nuevoPrecioProducto" precioReal="'.$respuesta["precio_venta"].'" name="nuevoPrecioProducto" value="'.$value["precio"].'" readonly required> 
+                                    <input type="text" class="form-control nuevoPrecioProducto" precioReal="'.$respuesta["precio_venta"].'" name="nuevoPrecioProducto" value="'.$value["total"].'" readonly required> 
                     
                                 </div> 
                             
