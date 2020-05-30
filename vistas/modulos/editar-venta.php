@@ -88,7 +88,7 @@
                     
                     <span class="input-group-addon"><i class="fa fa-key"></i></span>
                     
-                    <input type="text" class="form-control" id="nuevaVenta" name="nuevaVenta" value="<?php echo $venta["codigo"]; ?>" readonly>                   
+                    <input type="text" class="form-control" id="nuevaVenta" name="editarVenta" value="<?php echo $venta["codigo"]; ?>" readonly>                   
                   
                   </div>
                 
@@ -297,7 +297,7 @@
 
           <div class="box-footer">
 
-            <button type="submit" class="btn btn-primary pull-right">Guardar venta</button>
+            <button type="submit" class="btn btn-primary pull-right">Guardar cambios</button>
 
           </div>
 
@@ -305,8 +305,8 @@
 
         <?php 
         
-            $guardarVenta = new ControladorVentas();
-            $guardarVenta->ctrCrearVenta();
+            $editarVenta = new ControladorVentas();
+            $editarVenta->ctrEditarVenta();
         
         ?>
 
