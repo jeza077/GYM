@@ -626,6 +626,47 @@ function listarMetodos(){
 
     }
 }
+
+/*--====================================================================================================
+FUNCION PARA DESACTIVAR LOS BOTONES AGREGAR CUANDO EL PRODUCTO YA HABIA SIDO SELECCIONADO EN LA CARPETA
+=====================================================================================================--*/
+
+function quitarAgregarProducto() {
+
+    //Capturamos todos los Id de productos que fueron elegidos en la venta
+    var idProductos = $(".quitarProducto");
+
+    //Capturamos los botones de agregar que aparecen en la tabla
+    var botonesTabla = $(".tablaVentas tbody button.agregarProducto");
+
+    //Recorremos en un ciclo para obtener los diferentes idProductos que fueron agregadps a la venta
+    for (var i = 0; i < idProductos.length; i++) {
+
+        //Capturamos los Id de los productos agregados a la venta
+        var boton = $(idProductos[i]).attr("idProducto");
+
+        //Hacemos un recorrido por la tabla que aparece para desactivar los botones de agregar
+        for (var j = 0; j < botonesTabla.length; j++) {
+            
+            if($(botonesTabla[j]).attr("idProducto") == boton){
+
+                $(botonesTabla[j]).removeClass("btn-primary agregarProducto");
+                $(botonesTabla[j]).addClass("btn-default");
+            }
+            
+        }
+    }
+}
+/*--=================================================
+CADA VEZ QUE CARGUE LA TABLA CUANDO NAVEGUEMOS EN ELLA EJECUTAR LA FUNCION
+=================================================--*/
+
+$(".tablasVentas").on("draw.dt", function(){
+
+    quitarAgregarProducto();
+})
+
+
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 /*--=================================================
             BOTON EDITAR VENTA
