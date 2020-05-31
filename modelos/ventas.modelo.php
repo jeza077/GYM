@@ -87,5 +87,7 @@ class ModeloVentas{
 
 		$stmt->close();
 		$stmt = null;
-    }
+	}
+	
+	
 }

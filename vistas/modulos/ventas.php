@@ -94,7 +94,7 @@
 
                           <button class="btn btn-warning btnEditarVenta" idVenta="'.$value["id"].'"><i class="fa fa-pencil"></i></button>
 
-                          <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+                          <button class="btn btn-danger" idVenta="'.$value["id"].'"><i class="fa fa-times"></i></button>
 
                         </div>  
                     </td>
@@ -107,6 +107,7 @@
 
        </table>
 
+     
       </div>
 
     </div>
