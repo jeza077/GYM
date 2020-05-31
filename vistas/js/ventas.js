@@ -676,4 +676,33 @@ $(".btnEditarVenta").click(function(){
     var idVenta = $(this).attr("idVenta");
 
     window.location = "index.php?ruta=editar-venta&idVenta="+idVenta;
-})
+});
+
+/*--=================================================
+            ELIMINAR VENTA
+=================================================--*/
+$(".btnEliminarVenta").click(function() { 
+
+    var idVenta = $(this).attr("idVenta");
+    
+    swal({
+        type: "warning",
+        title: "¿Esta seguro de borrar la venta?",
+        text: "¡Si no lo esta puede cancelar la accion!",
+        showCancelButton: true,
+        showConfirmButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        cancelButtonText: "Cancelar",
+        confirmButtonText: "Si, borrar venta!",
+
+    }).then((result)=>{
+
+        if(result.value){
+
+            window.location = "index.php?ruta=ventas&idVenta="+idVenta;
+
+        }
+
+    });
+});
