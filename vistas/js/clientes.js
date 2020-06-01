@@ -1,7 +1,7 @@
 /*=============================================
                 EDITAR CLIENTES
 =============================================*/
-$(".btnEditarCliente").click(function(){ 
+$(".tablas").on("click", ".btnEditarCliente", function(){ 
  
     var idCliente = $(this).attr("idCliente");
     // console.log("idCliente", idCliente); 
@@ -41,7 +41,7 @@ $(".btnEditarCliente").click(function(){
 /*=============================================
              ELIMINAR CLIENTE
 =============================================*/
-$(".btnEliminarCliente").click(function() {  
+$(".tablas").on("click", ".btnEliminarCliente", function() {  
 
     var idCliente = $(this).attr("idCliente");
     // console.log("idCliente", idCliente); 
@@ -55,7 +55,7 @@ $(".btnEliminarCliente").click(function() {
         confirmButtonColor: "#3085d6",
         cancelButtonColor: "#d33",
         cancelButtonText: "Cancelar",
-        confirmButtonText: "Si, borrar categoria!",
+        confirmButtonText: "Si, borrar cliente!",
 
     }).then((result)=>{
 
