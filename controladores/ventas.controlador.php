@@ -69,7 +69,7 @@ class ControladorVentas{
             $hora = date('H:i:s');
             $valor1b = $fecha.' '.$hora;
 
-            $comprasCliente = ModeloClientes::mdlActualizarCliente($tablaClientes, $item1b, $valor1b, $valor);
+            $fechaCliente = ModeloClientes::mdlActualizarCliente($tablaClientes, $item1b, $valor1b, $valor);
 
             //----GUARDAR LA COMPRA ---//
 
@@ -87,6 +87,8 @@ class ControladorVentas{
             $respuesta = ModeloVentas::mdlIngresarVentas($tabla, $datos);
             if($respuesta == "ok"){
                 echo '<script>
+
+				localStorage.removeItem("rango");
 
                 swal({
                     
@@ -182,7 +184,7 @@ class ControladorVentas{
                 $item1a = "compras";
                 $valor1a = $traerCliente["compras"] - array_sum($totalProductosComprados);
 
-                $comprasCliente = ModeloClientes::mdlActualizarCliente($tablaClientes, $item1a, $valor1a, $valor);
+                $comprasCliente = ModeloClientes::mdlActualizarCliente($tablaClientes, $item1a, $valor1a, $valorCliente);
 
 
                 //----Actualizar compras del cliente y Reducir el Stock y Aumentar las Ventas de los Productos---//
@@ -206,7 +208,7 @@ class ControladorVentas{
                     $nuevasVentas_2 = ModeloProductos::mdlActualizarProducto($tablaProductos_2, $item1a_2, $valor1a_2, $valor_2);
 
                     $item1b_2 = "stock";
-                    $valor1b_2 = $value["stock"];
+                    $valor1b_2 = $traerProducto_2["stock"] - $value["cantidad"];
 
                     $nuevoStock_2 = ModeloProductos::mdlActualizarProducto($tablaProductos_2, $item1b_2, $valor1b_2, $valor_2);
                 }
