@@ -344,7 +344,7 @@ $(".tablaProductos tbody").on("click", "button.btnEliminarProducto", function(){
         confirmButtonColor: "#3085d6",
         cancelButtonColor: "#d33",
         cancelButtonText: "Cancelar",
-        confirmButtonText: "Si, borrar usuario!",
+        confirmButtonText: "Si, borrar producto!",
 
     }).then((result)=>{
 
