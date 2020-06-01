@@ -671,7 +671,7 @@ $(".tablasVentas").on("draw.dt", function(){
 /*--=================================================
             BOTON EDITAR VENTA
 =================================================--*/
-$(".btnEditarVenta").click(function(){
+$(".tablas").on("click", ".btnEditarVenta", function(){
 
     var idVenta = $(this).attr("idVenta");
 
@@ -681,7 +681,7 @@ $(".btnEditarVenta").click(function(){
 /*--=================================================
             ELIMINAR VENTA
 =================================================--*/
-$(".btnEliminarVenta").click(function() { 
+$(".tablas").on("click", ".btnEliminarVenta", function() { 
 
     var idVenta = $(this).attr("idVenta");
     
