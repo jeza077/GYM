@@ -42,7 +42,7 @@ $(".nuevaFoto").change(function(){
 /*=============================================
                 EDITAR USUARIO
 =============================================*/
-$(".btnEditarUsuario").click(function() {  
+$(".tablas").on("click",".btnEditarUsuario", function() {  
     var idUsuario = $(this).attr("idUsuario");
     // console.log("idUsuario", idUsuario); 
 
@@ -81,7 +81,7 @@ $(".btnEditarUsuario").click(function() {
 /*=============================================
                 ACTIVAR USUARIO
 =============================================*/
-$(".btnActivar").click(function() { 
+$(".tablas").on("click", ".btnActivar", function() { 
 
     var idUsuario = $(this).attr("idUsuario");
     var estadoUsuario = $(this).attr("estadoUsuario");
@@ -163,7 +163,7 @@ $("#nuevoUsuario").change(function() {
 /*=============================================
                 ELIMINAR USUARIO
 =============================================*/
-$(".btnEliminarUsuario").click(function() { 
+$(".tablas").on("click", ".btnEliminarUsuario", function() { 
 
     var idUsuario = $(this).attr("idUsuario");
     var fotoUsuario = $(this).attr("fotoUsuario");
