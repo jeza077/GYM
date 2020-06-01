@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 
 require_once "../../../controladores/ventas.controlador.php";
 require_once "../../../modelos/ventas.modelo.php";
@@ -63,7 +64,7 @@ $bloque1 = <<<EOF
 		
 		<tr>
 			
-			<td style="width:150px"><img src="images/logo-negro-bloque.png"></td>
+			<td style="width:150px padding-top:0px;"><img src="images/logo-gym.png"></td>
 
 			<td style="background-color:white; width:140px">
 				
@@ -73,21 +74,21 @@ $bloque1 = <<<EOF
 					NIT: 71.759.963-9
 
 					<br>
-					Dirección: Calle 44B 92-11
+					Dirección: Barrio Belen
 
 				</div>
 
 			</td>
 
-			<td style="background-color:white; width:140px">
+			<td style="background-color:white; width:140px;">
 
 				<div style="font-size:8.5px; text-align:right; line-height:15px;">
 					
 					<br>
-					Teléfono: 300 786 52 49
+					Teléfono: 88 88 88 99
 					
 					<br>
-					ventas@inventorysystem.com
+					gym@laroca.com
 
 				</div>
 				
@@ -287,12 +288,12 @@ EOF;
 
 $pdf->writeHTML($bloque5, false, false, false, false, '');
 
-
-
 // ---------------------------------------------------------
 //SALIDA DEL ARCHIVO 
 
-$pdf->Output('factura.pdf', 'D');
+// $pdf->Output('factura.pdf', 'D');
+$pdf->Output('factura.pdf');
+
 
 }
 
