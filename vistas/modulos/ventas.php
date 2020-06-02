@@ -29,6 +29,16 @@
             Agregar venta 
           </button>
         </a>
+
+        <button type="button" class="btn btn-default pull-right" id="daterange-btn">
+        
+          <span>
+            <i class="fa fa-calendar"></i> Rango de fecha
+          </span>
+
+          <i class="fa fa-caret-down"></i>
+
+        </button>
   
       </div>
 
@@ -58,10 +68,22 @@
 
         <?php 
 
+          if(isset($_GET["fechaInicial"])){
+
+            $fechaInicial = $_GET["fechaInicial"];
+            $fechaFinal = $_GET["fechaFinal"];
+
+          } else {
+
+            $fechaInicial = null;
+            $fechaFinal = null;
+
+          }
+
           $item = null;
           $valor = null;
 
-          $respuesta = ControladorVentas::ctrMostrarVentas($item, $valor);
+          $respuesta = ControladorVentas::ctrRangoFechasVentas($fechaInicial, $fechaFinal);
 
           foreach ($respuesta as $key => $value) {
             
