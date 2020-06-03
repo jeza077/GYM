@@ -1,4 +1,5 @@
 <?php
+    error_reporting(0);
 
     if(isset($_GET["fechaInicial"])){
 
@@ -14,13 +15,34 @@
 
     $respuesta = ControladorVentas::ctrRangoFechasVentas($fechaInicial, $fechaFinal);
 
+    $arrayFechas = array();
+    $arrayVentas = array();
+    $sumaPagosMes = array();
+
     foreach ($respuesta as $key => $value) {
 
-        
+        #Capturamos sólo el año y el mes
+        $fecha = substr($value["fecha"],0,7);
+
+        #Introducir las fechas en arrayFechas
+        array_push($arrayFechas, $fecha);
+
+        #Capturamos las ventas
+        $arrayVentas = array($fecha => $value["total"]);
+
+        #Sumamos los pagos que ocurrieron el mismo mes
+        foreach ($arrayVentas as $key => $value) {
+		
+            $sumaPagosMes[$key] += $value;
+            
+	    }
 
     }      
 
+    $noRepetirFechas = array_unique($arrayFechas);
+
 ?>
+
 <!-- =============================================
             GRAFICO DE VENTAS
   ============================================= -->
