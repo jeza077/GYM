@@ -50,6 +50,10 @@ session_start();
   <!-- Daterange Picker -->
   <link rel="stylesheet" href="vistas/bower_components/bootstrap-daterangepicker/daterangepicker.css">
 
+  <!-- Morris.css Chart -->
+  <link rel="stylesheet" href="vistas/bower_components/morris.js/morris.css">
+
+
 
 
   <!--=====================================
@@ -91,6 +95,10 @@ session_start();
   <!-- Daterange Picker -->
   <script src="vistas/bower_components/moment/min/moment.min.js"></script>
   <script src="vistas/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script> 
+
+  <!-- Morris.js Chart -->
+  <script src="vistas/bower_components/raphael/raphael.min.js"></script>
+  <script src="vistas/bower_components/morris.js//morris.min.js"></script> 
 
 </head>
 
@@ -173,6 +181,8 @@ CUERPO DOCUMENTO
 <script src="vistas/js/productos.js"></script>
 <script src="vistas/js/clientes.js"></script>
 <script src="vistas/js/ventas.js"></script>
+<script src="vistas/js/reportes.js"></script>
+
 
 </body>
 </html>

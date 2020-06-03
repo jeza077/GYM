@@ -779,9 +779,9 @@ $('#daterange-btn').daterangepicker(
       window.location = "ventas";
   })
   
-//   /*=============================================
-//          CAPTURAR HOY
-//   =============================================*/
+  /*=============================================
+         CAPTURAR HOY
+  =============================================*/
   
   $(".daterangepicker.opensleft .ranges li").on("click", function(){
   

@@ -80,9 +80,6 @@
 
           }
 
-          $item = null;
-          $valor = null;
-
           $respuesta = ControladorVentas::ctrRangoFechasVentas($fechaInicial, $fechaFinal);
 
           foreach ($respuesta as $key => $value) {
