@@ -114,8 +114,9 @@
 
 $item = null;
 $valor = null;
+$orden = "id";
 
-$productos = ControladorProductos::ctrMostrarProductos($item, $valor);
+$productos = ControladorProductos::ctrMostrarProductos($item, $valor, $orden);
 
   foreach ($productos as $key => $value) {
     // code...
