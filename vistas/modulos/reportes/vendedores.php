@@ -21,13 +21,14 @@
                 #Capturamos los nombres y los valores nets en un mismo array
                 $arrayListaVendedores = array($valueUsuarios["nombre"] => $valueVentas["neto"]);
 
-            }
-
-            #Sumamos los netos de cada vendedor
-            foreach ($arrayListaVendedores as $key => $value) {
+                #Sumamos los netos de cada vendedor
+                foreach ($arrayListaVendedores as $key => $value) {
                 
                 $sumaTotalVendedores[$key] += $value;
             }
+            }
+
+           
             
         }
 
