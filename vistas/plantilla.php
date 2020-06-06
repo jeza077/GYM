@@ -180,7 +180,7 @@ CUERPO DOCUMENTO
 
 <script src="vistas/js/plantilla.js"></script>
 <script src="vistas/js/usuarios.js"></script>
-<script src="vistas/js/validarContraseña.js"></script>
+<script src="vistas/js/validaciones.js"></script>
 <script src="vistas/js/categorias.js"></script>
 <script src="vistas/js/productos.js"></script>
 <script src="vistas/js/clientes.js"></script>

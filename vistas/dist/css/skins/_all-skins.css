@@ -7,13 +7,13 @@
 .invalid{
   color: red;
 }
-#con_info{
+.con_info{
   border: 1px solid grey;
   margin-bottom: 5px;
   display: none; 
 }
 
-#con_info_2{
+/* #con_info_2{
   border: 1px solid grey;
   margin-bottom: 5px;
   display: none; 
@@ -24,8 +24,8 @@
 
 .invalid-2{
   color: red;
-}
-
+} */
+/*---------------------------------------------------------------------------------*/
 /*
  * Skin: Blue
  * ----------

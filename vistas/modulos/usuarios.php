@@ -193,14 +193,14 @@
              </div>
 
               <!-- validar contraseña  -->
-              <div id="con_info">
+              <div class="con_info">
                 <h4>La contraseña debe cumplir con los siguientes requerimientos:</h4>
                 <ul>
-                  <li id="letter">Al menos debe tener <strong>una letra</strong></li>
-                  <li id="capital">Al menos debe tener <strong>una letra en mayuscula</strong></li>
-                  <li id="number">Al menos debe tener <strong>un numero</strong></li>
-                  <li id="special">Al menos debe tener <strong>un caracter especial</strong></li>
-                  <li id="length">Al menos debe tener <strong>8 caracteres como minimo y 16 maximo</strong></li>
+                  <li class="letter">Al menos debe tener <strong>una letra</strong></li>
+                  <li class="capital">Al menos debe tener <strong>una letra en mayuscula</strong></li>
+                  <li class="number">Al menos debe tener <strong>un numero</strong></li>
+                  <li class="special">Al menos debe tener <strong>un caracter especial</strong></li>
+                  <li class="length">Al menos debe tener <strong>8 caracteres como minimo y 16 maximo</strong></li>
                 </ul>
               </div>
 
@@ -351,14 +351,14 @@ MODAL EDITAR USUARIO
             </div>
 
              <!-- validar contraseña  -->
-              <div id="con_info_2">
+              <div class="con_info">
                 <h4>La contraseña debe cumplir con los siguientes requerimientos:</h4>
                 <ul>
-                  <li id="letter">Al menos debe tener <strong>una letra</strong></li>
-                  <li id="capital">Al menos debe tener <strong>una letra en mayuscula</strong></li>
-                  <li id="number">Al menos debe tener <strong>un numero</strong></li>
-                  <li id="special">Al menos debe tener <strong>un caracter especial</strong></li>
-                  <li id="length">Al menos debe tener <strong>8 caracteres como minimo y 16 maximo</strong></li>
+                  <li class="letter">Al menos debe tener <strong>una letra</strong></li>
+                  <li class="capital">Al menos debe tener <strong>una letra en mayuscula</strong></li>
+                  <li class="number">Al menos debe tener <strong>un numero</strong></li>
+                  <li class="special">Al menos debe tener <strong>un caracter especial</strong></li>
+                  <li class="length">Al menos debe tener <strong>8 caracteres como minimo y 16 maximo</strong></li>
                 </ul>
               </div>
 

@@ -269,7 +269,7 @@ class ControladorUsuarios{
 					swal({
 
 						type: "error",
-						title: "¡El usuario debe escribirse solo en mayusculas, no puede llevar caracteres especiales, no puede ir vacío!",
+						title: "¡Llenar campos correctamente!",
 						showConfirmButton: true,
 						confirmButtonText: "Cerrar",
 						closeOnConfirm: false
@@ -410,7 +410,7 @@ class ControladorUsuarios{
 									swal({
 
 										type: "error",
-										title: "¡La contraseña no puede ir vacia o llevar caracteres especiales!",
+										title: "¡La contraseña no puede ir vacia!",
 										showConfirmButton: true,
 										confirmButtonText: "Cerrar",
 										closeOnConfirm: false
