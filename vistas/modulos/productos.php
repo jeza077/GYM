@@ -73,7 +73,7 @@ MODAL AGREGAR PRODUCTO
 
 <div id="modalAgregarProducto" class="modal fade" role="dialog">
   
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
 
     <div class="modal-content">
 
@@ -99,9 +99,10 @@ MODAL AGREGAR PRODUCTO
 
           <div class="box-body">
 
+          <div class="row">
           <!-- ENTRADA PARA SELECCIONAR SU CATEGORIA -->
 
-            <div class="form-group">
+            <div class="form-group col-lg-6 col-xs-12">
                 
                 <div class="input-group">
                 
@@ -130,7 +131,7 @@ MODAL AGREGAR PRODUCTO
 
             <!-- ENTRADA PARA EL CODIGO -->
             
-            <div class="form-group">
+            <div class="form-group col-lg-6 col-xs-12">
               
               <div class="input-group">
               
@@ -141,37 +142,41 @@ MODAL AGREGAR PRODUCTO
               </div>
 
             </div>
+          </div>
 
-            <!-- ENTRADA PARA EL DESCRIPCION -->
+          
+        
+          <div class="row">
+              <div class="form-group col-xs-12 col-lg-6">
+              <!-- ENTRADA PARA EL DESCRIPCION -->
+                
+                <div class="input-group">
+                
+                  <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
 
-             <div class="form-group">
-              
-              <div class="input-group">
-              
-                <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
+                  <input type="text" class="form-control input-lg" name="nuevaDescripcion" placeholder="Ingresar descripcion" required>
 
-                <input type="text" class="form-control input-lg" name="nuevaDescripcion" placeholder="Ingresar descripcion" required>
+                </div>
 
               </div>
-
-            </div>
-
 
             <!-- ENTRADA PARA EL STOCK -->
+              <div class="form-group col-xs-12 col-lg-6">
+                
+                <div class="input-group">
+                
+                  <span class="input-group-addon"><i class="fa fa-check"></i></span> 
 
-            <div class="form-group">
-              
-              <div class="input-group">
-              
-                <span class="input-group-addon"><i class="fa fa-check"></i></span> 
+                  <input type="number" class="form-control input-lg" name="nuevoStock" min="0" placeholder="Stock" required>
 
-                <input type="number" class="form-control input-lg" name="nuevoStock" min="0" placeholder="Stock" required>
+                </div>
 
               </div>
 
-            </div>
+          </div>
 
-            <div class="form-group row">
+
+            <div class="form-group row" style="margin-bottom:0px;">
               <!-- ENTRADA PARA EL PRECIO DE COMPRA -->
               <div class="col-xs-6">
                 <div class="input-group">
