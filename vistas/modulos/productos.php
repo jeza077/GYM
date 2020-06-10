@@ -142,6 +142,7 @@ MODAL AGREGAR PRODUCTO
               </div>
 
             </div>
+
           </div>
 
           
@@ -272,7 +273,7 @@ MODAL EDITAR PRODUCTO
 
 <div id="modalEditarProducto" class="modal fade" role="dialog">
   
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
 
     <div class="modal-content">
 
@@ -298,9 +299,10 @@ MODAL EDITAR PRODUCTO
 
           <div class="box-body">
 
+          <div class="row">
           <!-- ENTRADA PARA SELECCIONAR SU CATEGORIA -->
 
-            <div class="form-group">
+            <div class="form-group col-lg-6 col-xs-12">
                 
                 <div class="input-group">
                 
@@ -318,7 +320,7 @@ MODAL EDITAR PRODUCTO
 
             <!-- ENTRADA PARA EL CODIGO -->
             
-            <div class="form-group">
+            <div class="form-group col-lg-6 col-xs-12">
               
               <div class="input-group">
               
@@ -329,10 +331,14 @@ MODAL EDITAR PRODUCTO
               </div>
 
             </div>
+            
+          </div>
 
+
+          <div class="row">
             <!-- ENTRADA PARA EL DESCRIPCION -->
 
-             <div class="form-group">
+            <div class="form-group col-xs-12 col-lg-6">
               
               <div class="input-group">
               
@@ -347,7 +353,7 @@ MODAL EDITAR PRODUCTO
 
             <!-- ENTRADA PARA EL STOCK -->
 
-            <div class="form-group">
+            <div class="form-group col-xs-12 col-lg-6">
               
               <div class="input-group">
               
@@ -358,8 +364,10 @@ MODAL EDITAR PRODUCTO
               </div>
 
             </div>
+            
+          </div>
 
-            <div class="form-group row">
+            <div class="form-group row" style="margin-bottom:0px;">
               <!-- ENTRADA PARA EL PRECIO DE COMPRA -->
               <div class="col-xs-6">
                 <div class="input-group">
