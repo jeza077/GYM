@@ -16,10 +16,15 @@
 
 
 .skin-blue .main-header .navbar {
-background-color: var(--primario);
+background-color: #ecf0f5;
 }
 .skin-blue .main-header .navbar .nav > li > a {
-color: #ffffff;
+color: #000;
+background: #fff;
+border-radius: 15px;
+margin: 8px 25px 0 0;
+padding: 7px 20px 7px 0px;
+text-align: start!important;
 }
 .skin-blue .main-header .navbar .nav > li > a:hover,
 .skin-blue .main-header .navbar .nav > li > a:active,
@@ -39,7 +44,7 @@ color: #f6f6f6;
 background: var(--secundario);
 }
 .skin-blue .main-header .navbar .sidebar-toggle {
-color: #fff;
+color: #000;
 }
 .skin-blue .main-header .navbar .sidebar-toggle:hover {
 background-color: var(--secundario);
@@ -50,6 +55,7 @@ background-color: var(--secundario);
 }
 .skin-blue .main-header .navbar .dropdown-menu li a {
   color: #fff;
+  background-color: #fff;
 }
 .skin-blue .main-header .navbar .dropdown-menu li a:hover {
   background: var(--secundario);
