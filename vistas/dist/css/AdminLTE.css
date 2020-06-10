@@ -5,10 +5,21 @@
  *   License: Open source - MIT
  *           Please visit http://opensource.org/licenses/MIT for more information
  */
+
+ :root {
+  /* --primario: #0C1115; */
+  /* --primario: #18222D; */
+  --primario: #0D1218;
+  --primarioHover: #13191E;
+  --secundario: #FF8C01;
+  --secundarioHover: rgb(233, 131, 6);
+}
+
 /*
  * Core: General Layout Style
  * -------------------------
  */
+ 
 html,
 body {
   height: 100%;
@@ -2352,6 +2363,17 @@ a:focus {
 .btn-default:active,
 .btn-default.hover {
   background-color: #e7e7e7;
+}
+.btn-naranja {
+  background-color: var(--secundario);
+  border-color: var(--secundario);
+  color: #fff;
+}
+.btn-naranja:hover,
+.btn-naranja:active,
+.btn-naranja.hover {
+  background-color: var(--secundarioHover);
+  color: #fff;
 }
 .btn-primary {
   background-color: #3c8dbc;

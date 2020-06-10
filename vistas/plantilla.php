@@ -35,7 +35,7 @@ session_start();
   <link rel="stylesheet" href="vistas/dist/css/AdminLTE.css">
   
   <!-- AdminLTE Skins -->
-  <link rel="stylesheet" href="vistas/dist/css/skins/_all-skins.css">
+  <link rel="stylesheet" href="vistas/dist/css/skins/skin-blue.css">
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -110,7 +110,7 @@ session_start();
 CUERPO DOCUMENTO
 ======================================-->
 
-<body class="hold-transition skin-black sidebar-collapse sidebar-mini login-page">
+<body class="hold-transition skin-blue sidebar-collapse sidebar-mini login-page">
  
     <?php
 

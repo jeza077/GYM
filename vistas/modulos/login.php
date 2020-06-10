@@ -33,7 +33,7 @@
        
         <div class="col-xs-12">
 
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Ingresar</button>
+          <button type="submit" class="btn btn-naranja btn-block btn-flat">Ingresar</button>
         
         </div>
 

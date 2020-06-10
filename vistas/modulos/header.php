@@ -66,7 +66,7 @@
 					<ul class="dropdown-menu">
 						 <!-- User Account: style can be found in dropdown.less -->
 							<!-- User image -->
-							<li class="user-header">
+							<li class="user-header"  style="border-radius:5px 5px 0px 0px;">
 								<?php
 									// Si la imagen no viene vacia, la trae de la BD.
 									if($_SESSION["foto"] != ""){
@@ -93,7 +93,7 @@
 
 							</li> -->
 
-							<li class="user-footer">
+							<li class="user-footer" style="border-radius:0px 0px 5px 5px;">
 
 								<div class="pull-left">
 									<a href="#" class="btn btn-default btn-flat">Perfil</a>

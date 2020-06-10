@@ -24,7 +24,7 @@
 
       <div class="box-header with-border">
   
-        <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarProducto">
+        <button class="btn btn-naranja" data-toggle="modal" data-target="#modalAgregarProducto">
           
           Agregar producto
 
@@ -247,7 +247,7 @@ MODAL AGREGAR PRODUCTO
 
           <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
 
-          <button type="submit" class="btn btn-primary">Guardar producto</button>
+          <button type="submit" class="btn btn-naranja">Guardar producto</button>
 
         </div>
         <?php 
@@ -431,7 +431,7 @@ MODAL EDITAR PRODUCTO
 
           <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
 
-          <button type="submit" class="btn btn-primary">Guardar cambios</button>
+          <button type="submit" class="btn btn-naranja">Guardar cambios</button>
 
         </div>
      

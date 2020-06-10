@@ -24,7 +24,7 @@
 
       <div class="box-header with-border">
   
-        <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarCliente">
+        <button class="btn btn-naranja" data-toggle="modal" data-target="#modalAgregarCliente">
           Agregar Cliente 
         </button>
 
@@ -226,7 +226,7 @@ MODAL AGREGAR CLIENTE
 
           <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
 
-          <button type="submit" class="btn btn-primary">Guardar cliente</button>
+          <button type="submit" class="btn btn-naranja">Guardar cliente</button>
 
         </div>
 
@@ -367,7 +367,7 @@ MODAL EDITAR CLIENTE
 
           <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
 
-          <button type="submit" class="btn btn-primary">Guardar cambios</button>
+          <button type="submit" class="btn btn-naranja">Guardar cambios</button>
 
         </div>
 

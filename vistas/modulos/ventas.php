@@ -25,7 +25,7 @@
       <div class="box-header with-border">
   
         <a href="crear-venta">
-          <button class="btn btn-primary">
+          <button class="btn btn-naranja">
             Agregar venta 
           </button>
         </a>

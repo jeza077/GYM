@@ -24,7 +24,7 @@
 
       <div class="box-header with-border">
   
-        <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarCategoria">
+        <button class="btn btn-naranja" data-toggle="modal" data-target="#modalAgregarCategoria">
           Agregar categoria 
         </button>
 
@@ -147,7 +147,7 @@
 
           <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
 
-          <button type="submit" class="btn btn-primary">Guardar categoria</button>
+          <button type="submit" class="btn btn-naranja">Guardar categoria</button>
 
         </div>
 
@@ -225,7 +225,7 @@
 
           <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
 
-          <button type="submit" class="btn btn-primary">Guardar cambios</button>
+          <button type="submit" class="btn btn-naranja">Guardar cambios</button>
 
         </div>
 
