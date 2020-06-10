@@ -10,6 +10,7 @@
   /* --primario: #0D1218; */
   --primarioHover: #13191E;
   --secundario: #FF8C01;
+  --secundarioHover: rgb(233, 131, 6);
 
 }
 
@@ -28,7 +29,7 @@ color: #ffffff;
 .skin-blue .main-header .navbar .nav .open > a:hover,
 .skin-blue .main-header .navbar .nav .open > a:focus,
 .skin-blue .main-header .navbar .nav > .active > a {
-background: var(--secundario);
+background: var(--secundarioHover);
 color: #f6f6f6;
 }
 .skin-blue .main-header .navbar .sidebar-toggle {
@@ -36,13 +37,13 @@ color: #ffffff;
 }
 .skin-blue .main-header .navbar .sidebar-toggle:hover {
 color: #f6f6f6;
-background: var(--secundario);
+background: var(--secundarioHover);
 }
 .skin-blue .main-header .navbar .sidebar-toggle {
 color: #fff;
 }
 .skin-blue .main-header .navbar .sidebar-toggle:hover {
-background-color: var(--secundario);
+background-color: var(--secundarioHover);
 }
 @media (max-width: 767px) {
 .skin-blue .main-header .navbar .dropdown-menu li.divider {
@@ -52,7 +53,7 @@ background-color: var(--secundario);
   color: #fff;
 }
 .skin-blue .main-header .navbar .dropdown-menu li a:hover {
-  background: var(--secundario);
+  background: var(--secundarioHover);
 }
 }
 .skin-blue .main-header .logo {
