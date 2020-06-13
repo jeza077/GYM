@@ -102,9 +102,9 @@ margin: 3px 7px;
 border-radius: 3px;
 padding: 12px 5px 12px 12px!important;
 }
-.skin-blue .sidebar-menu > li.active > a {
+/* .skin-blue .sidebar-menu > li.active > a {
 border-left-color: var(--secundario);
-}
+} */
 .skin-blue .sidebar-menu > li > .treeview-menu {
 margin: 0 1px;
 background: var(--primarioHover);
