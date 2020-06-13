@@ -56,3 +56,42 @@ $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
 $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
 //Money Euro
 $('[data-mask]').inputmask()
+
+//--------------------------------------------
+//Switch
+
+const btnSwitch = document.querySelector('#switch');
+
+btnSwitch.addEventListener('click', () => {
+
+	if(document.body.classList.contains('skin-black')){
+		document.body.classList.toggle('skin-white');
+		document.body.classList.remove('skin-black');
+	} else {
+		document.body.classList.toggle('skin-black');
+		document.body.classList.remove('skin-white');
+	}
+
+	
+    btnSwitch.classList.toggle('active');
+
+    //Guardamos el modo en LocalStorage
+    if(document.body.classList.contains('skin-white')){
+        localStorage.setItem('skin-white-mode', 'true');
+    } else {
+        localStorage.setItem('skin-white-mode', 'false');
+    }
+});
+
+//Obtenemos el modo actual
+if(localStorage.getItem('skin-white-mode') === 'true'){
+    document.body.classList.remove('skin-black');
+    document.body.classList.add('skin-white');
+    btnSwitch.classList.add('active');
+
+} else {
+	document.body.classList.remove('skin-white');
+    document.body.classList.add('skin-black');
+    btnSwitch.classList.remove('active');
+
+}
