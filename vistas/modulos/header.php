@@ -95,10 +95,17 @@
 
 							<li class="user-footer" style="border-radius:0px 0px 5px 5px;">
 
-								<div class="pull-left">
+								<!-- <div class="pull-left">
 									<a href="#" class="btn btn-default btn-flat">Perfil</a>
-								</div>
+								</div> -->
 
+								<div class="pull-left">
+									<button class="switch" id="switch">
+										<span><i class="fa fa-sun-o"></i></span>
+										<span><i class="fa fa-moon-o"></i></span>
+									</button>
+								</div>
+								
 								<div class="pull-right">
 									<a href="salir" class="btn btn-default">Salir</a>
 								</div>
