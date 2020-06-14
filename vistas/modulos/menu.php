@@ -28,6 +28,17 @@
 
 			<li>
 
+				<a href="empleados">
+
+					<i class="fa fa-users"></i>
+					<span>Empleados</span>
+
+				</a>
+
+			</li>
+
+			<li>
+
 				<a href="categorias">
 
 					<i class="fa fa-th"></i>
@@ -111,6 +122,50 @@
 					</li>
 
 				</ul>
+
+			</li>
+
+			<li>
+
+				<a href="mensajeria">
+
+					<i class="fa fa-envelope"></i>
+					<span>Mensajeria</span>
+
+				</a>
+
+			</li>
+
+			<li>
+
+				<a href="proveedores">
+
+					<i class="fa fa-users"></i>
+					<span>Proveedores</span>
+
+				</a>
+
+			</li>
+
+			<li>
+
+				<a href="auditoria">
+
+					<i class="fa fa-clipboard"></i>
+					<span>Auditoria</span>
+
+				</a>
+
+			</li>
+
+			<li>
+
+				<a href="configuracion">
+
+					<i class="fa fa-cogs"></i>
+					<span>Configuracion</span>
+
+				</a>
 
 			</li>
 
