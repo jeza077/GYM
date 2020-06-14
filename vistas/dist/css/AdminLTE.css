@@ -3194,7 +3194,7 @@ table.text-center th {
   background: rgba(0, 0, 0, 0.3);
 }
 .modal-content {
-  border-radius: 0;
+  border-radius: 4px;
   -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.125);
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.125);
   border: 0;
@@ -3206,7 +3206,12 @@ table.text-center th {
   }
 }
 .modal-header {
+  border-radius: 4px 4px 0 0;
   border-bottom-color: #f4f4f4;
+}
+body.skin-white .modal-header {
+  background: var(--secundario)!important;
+  color: #fff;
 }
 .modal-footer {
   border-top-color: #f4f4f4;
