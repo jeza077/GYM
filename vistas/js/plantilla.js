@@ -62,16 +62,18 @@ $('[data-mask]').inputmask()
 
 const btnSwitch = document.querySelector('#switch');
 
+
+
 btnSwitch.addEventListener('click', () => {
 
 	if(document.body.classList.contains('skin-black')){
 		document.body.classList.toggle('skin-white');
 		document.body.classList.remove('skin-black');
+
 	} else {
 		document.body.classList.toggle('skin-black');
 		document.body.classList.remove('skin-white');
 	}
-
 	
     btnSwitch.classList.toggle('active');
 
@@ -85,6 +87,8 @@ btnSwitch.addEventListener('click', () => {
 
 //Obtenemos el modo actual
 if(localStorage.getItem('skin-white-mode') === 'true'){
+
+
     document.body.classList.remove('skin-black');
     document.body.classList.add('skin-white');
     btnSwitch.classList.add('active');

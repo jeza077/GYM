@@ -121,7 +121,7 @@ session_start();
 CUERPO DOCUMENTO
 ======================================-->
 
-<body class="hold-transition skin-blue sidebar-collapse sidebar-mini login-page">
+<body class="hold-transition sidebar-collapse sidebar-mini login-page">
  
     <?php
 

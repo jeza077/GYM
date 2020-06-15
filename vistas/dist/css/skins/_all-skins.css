@@ -4,10 +4,12 @@
 :root {
   /* SKIN-BLACK */
  /* --primario: #0C1115; */
- --primarioSB1: #010913;
- /* --primarioSB1: #0D1218; */
+ /* --primarioSB1: #010913; */
+ --primarioSB1: rgb(34, 34, 34);
  --primarioSB1Hover: #13191E;
- --primarioSB2: #FF8C01;
+ /* --primarioSB2: #FF8C01; */
+ --primarioSB2: rgb(251, 136, 29);
+ --primarioSB2Hover: #f87620;
 
  /* SKIN-WHITE */
    /* --secundarioSW1: #0C1115; */
@@ -19,6 +21,8 @@
 
  /* FONTS */
    --font1: #1C2833;
+   --font2: #25313b;
+
 
 }
 
@@ -178,12 +182,14 @@ background-color: var(--primarioSB2);
 * ----------
 */
 
+
 .skin-white .main-header .navbar {
 background-color: var(--primarioSB2);
-transition: .5s ease all;
+transition: .4s ease all;
 }
-.skin-white .main-header .navbar .nav > li > a {
+.skin-white .main-header .navbar .nav > li > a { /* 'a' del usuario logueado */
 color: #ffffff;
+transition: .3s ease all;
 }
 .skin-white .main-header .navbar .nav > li > a:hover,
 .skin-white .main-header .navbar .nav > li > a:active,
@@ -192,21 +198,23 @@ color: #ffffff;
 .skin-white .main-header .navbar .nav .open > a:hover,
 .skin-white .main-header .navbar .nav .open > a:focus,
 .skin-white .main-header .navbar .nav > .active > a {
-background: var(--secundarioSW2);
+background: var(--primarioSB2Hover);
 color: #f6f6f6;
 }
-.skin-white .main-header .navbar .sidebar-toggle {
+/* .skin-white .main-header .navbar .sidebar-toggle {
 color: #ffffff;
 }
 .skin-white .main-header .navbar .sidebar-toggle:hover {
 color: #f6f6f6;
 background: var(--secundarioSW2);
-}
+} */
 .skin-white .main-header .navbar .sidebar-toggle {
 color: #fff;
+transition: .3s ease all;
 }
 .skin-white .main-header .navbar .sidebar-toggle:hover { /* Toggle para ocultar y mostrar sidebar */
-background-color: var(--secundarioSW2);
+/* background-color: var(--primarioSB2Hover); */
+color: var(--font1);
 }
 @media (max-width: 767px) {
 .skin-white .main-header .navbar .dropdown-menu li.divider {
@@ -216,21 +224,21 @@ background-color: var(--secundarioSW2);
   color: #fff;
 }
 .skin-white .main-header .navbar .dropdown-menu li a:hover {
-  background: var(--secundarioSW2);
+  background: var(--primarioSB2Hover);
 }
 }
 .skin-white .main-header .logo {
 background-color: var(--primarioSB2);
 color: #ffffff;
 border-bottom: 0 solid transparent;
-transition: .5s ease all;
+transition: .3s ease all;
 }
 .skin-white .main-header .logo:hover {
-background-color: var(--secundarioSW1Hover);
+background-color: var(--primarioSB2Hover);
 }
 .skin-white .main-header li.user-header {
 background-color: var(--primarioSB2);
-transition: .5s ease all;
+transition: .4s ease all;
 }
 .skin-white .content-header {
 background: transparent;
@@ -239,7 +247,7 @@ background: transparent;
 .skin-white .main-sidebar,
 .skin-white .left-side {
 background-color: #fff;
-transition: .5s ease all;
+transition: .4s ease all;
 }
 .skin-white .user-panel > .info,
 .skin-white .user-panel > .info > a {
@@ -268,7 +276,7 @@ border-left-color: var(--secundarioSW2);
 } */
 .skin-white .sidebar-menu > li > .treeview-menu {
 margin: 0 1px;
-background: var(--secundarioSW1Hover);
+background: #f3f3f0;
 }
 .skin-white .sidebar a {
 color: var(--font1);
@@ -277,7 +285,8 @@ color: var(--font1);
 text-decoration: none;
 }
 .skin-white .sidebar-menu .treeview-menu > li > a {
-color: #8aa4af;
+/* color: #8aa4af; */
+color: var(--font2);
 }
 .skin-white .sidebar-menu .treeview-menu > li.active > a,
 .skin-white .sidebar-menu .treeview-menu > li > a:hover {
