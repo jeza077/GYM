@@ -70,13 +70,8 @@ class ControladorUsuarios{
 							echo '<br><div class="alert alert-danger">El usuario no esta activado, comuniquese con el administrador</div>';
 						}
 
-					}//else{
-						
-					// 	// $intentos++; 
-					// 	// echo '<br><div class="alert alert-danger">¡Usuario y contraseña invalidos! Numero de intentos is '.$intentos.'</div>';
-
-					// }
-
+					}
+					
 				} else {
 					//INTENTOS DE LOGUEARSE PERMITIDOS SOLO 3 AL REBASARLOS SE DESACTIVARA EL USUARIO INGRESADO AUTOMATICAMENTE.
 					$intentos = 3;
