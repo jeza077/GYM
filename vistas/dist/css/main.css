@@ -1,0 +1,15 @@
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: antiquewhite!important;
+}
+
+.main-sidebar {
+    position: fixed;
+}
+
+.content-wrapper {
+    padding-top: 6rem;
+}
