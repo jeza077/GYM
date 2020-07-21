@@ -70,6 +70,8 @@ class ControladorUsuarios{
 							echo '<br><div class="alert alert-danger">El usuario no esta activado, comuniquese con el administrador</div>';
 						}
 
+					} else {
+						return;
 					}
 					
 				} else {
