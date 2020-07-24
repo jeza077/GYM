@@ -143,5 +143,19 @@ class ModeloUsuarios{
 		$stmt = null;
 	}
 
+	static public function mdlMostrarPreguntas(){
+		$stmt = Conexion::conectar()->prepare(
+				"SELECT u.usuario, p.pregunta, up.respuesta FROM usuarios AS u "
+
+				. "	INNER JOIN usuario_pregunta AS up ON u.id=up.fk_id_usua "
+
+				. "	INNER JOIN preguntas AS p ON up.fk_id_pregun=p.id "
+
+				. "	WHERE $item = :$item ");
+		
+		$stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
+		$stmt -> execute();
+		return $stmt -> fetchAll();
+	}
 
 }

@@ -4,6 +4,7 @@ require_once "../controladores/usuarios.controlador.php";
 require_once "../modelos/usuarios.modelo.php";
 
 class AjaxUsuarios{
+
     /*=============================================
                 EDITAR USUARIO
     =============================================*/
@@ -54,8 +55,29 @@ class AjaxUsuarios{
 
         echo json_encode($respuesta);
     }
+    
+    /*=============================================
+        REVISAR CORREO INGRESADO PARA RECUPERAR CONTRASEÑA
+    =============================================*/
+    public $correoIngresado;
 
+    public function ajaxRevisarCorreo(){
+        $item = "correo";
+        $valor = $this->correoIngresado;
+        $respuesta = ControladorUsuarios::ctrMostrarUsuarios($item, $valor);
+ 
+        echo json_encode($respuesta);
+    }
 
+}
+
+/*=============================================
+REVISAR CORREO INGRESADO PARA RECUPERAR CONTRASEÑA
+=============================================*/
+if(isset($_POST["ingCorreo"])){
+    $revisar = new AjaxUsuarios();
+    $revisar->correoIngresado = $_POST["ingCorreo"];
+    $revisar->ajaxRevisarCorreo();
 }
 
 /*=============================================

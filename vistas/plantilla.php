@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(E_ALL & ~E_NOTICE);
 session_start();
 
 ?>
@@ -177,6 +177,7 @@ CUERPO DOCUMENTO
       }else{
 
         include "modulos/inicio.php";
+        
 
       }
 
@@ -190,9 +191,28 @@ CUERPO DOCUMENTO
 
     }else{
 
-      include "modulos/login.php";
+
+
+        if($_GET["ruta"] == "recuperar-password"){
+
+          include "modulos/".$_GET["ruta"].".php";
+          // include "vistas/modulos/recuperar-password.php";  
+          
+        } else {
+
+          include "modulos/login.php";
+
+          return;
+          // include "404.php";
+        }
+      
+
 
     }
+
+    
+
+
 
     ?>
 

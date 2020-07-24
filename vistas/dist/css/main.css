@@ -1,7 +1,18 @@
+.login-box {
+    /* width: 1100px; */
+    margin: 5% 55%;
+}
+
+.content-password{
+    height: 100vh!important;
+}
+
 .recuperar-password a{
     color: #000!important;
-
 }
+/* .recuperar-password a:hover .contenedor-password{
+    right: 50%;
+} */
 
 .main-header {
     position: fixed;
@@ -18,3 +29,4 @@
 .content-wrapper {
     padding-top: 6rem;
 }
+

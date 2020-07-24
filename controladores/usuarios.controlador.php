@@ -533,6 +533,82 @@ class ControladorUsuarios{
 			}
 		}
 	}
+
+	/*=============================================
+            RECUPERAR CONTRASEÑA DE USUARIO
+	=============================================*/	
+
+	static public function ctrRecuperarPassword(){
+
+		if(isset($_POST['ingCorreo'])){
+
+			$tabla = "usuarios";
+					
+			$item = "correo";
+			$valor = $_POST["ingCorreo"];
+
+		
+
+			$respuesta = ModeloUsuarios::MdlMostrarUsuarios($tabla, $item, $valor);
+
+			if($respuesta['correo'] == $_POST['ingCorreo']) {
+
+				// $id = $respuesta['id'];
+
+			
+
+			
+
+				// echo '<script>
+
+				// 		swal({		
+				// 			type: "success",
+				// 			title: "Correcto!",
+				// 			showConfirmButton: true,
+				// 			confirmButtonText: "Cerrar",
+				// 			closeOnConfirm: false
+				// 			})
+
+				// 	</script>';
+			} else {
+				echo '<script>
+
+						swal({		
+							type: "error",
+							title: "¡Correo Invalido! ",
+							showConfirmButton: true,
+							confirmButtonText: "Cerrar",
+							closeOnConfirm: false
+							})
+
+					</script>';
+				
+			}
+
+			
+
+
+			// echo '<script>
+
+			// 			swal({		
+			// 				type: "success",
+			// 				title: "¡Recu!",
+			// 				showConfirmButton: true,
+			// 				confirmButtonText: "Cerrar",
+			// 				closeOnConfirm: false
+			// 				}).then((result)=>{
+
+			// 					if(result.value){
+
+			// 						window.location = "recuperar-password";
+
+			// 					}
+
+			// 				});
+
+			// 		</script>';
+		}
+	}
 }
 	
 

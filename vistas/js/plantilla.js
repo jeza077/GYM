@@ -57,6 +57,38 @@ $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
 //Money Euro
 $('[data-mask]').inputmask()
 
+
+
+//---------------------------------------------------
+//MOSTRAR Y OCULTAR RECUPERAR PASSWORD 
+$(".login-box").on("click", "#recuperar-password", function(event){ 
+	event.preventDefault();
+
+	var correoIngresado = $("#ingCorreo").val();
+	// console.log(correoIngresado);
+
+	var datos = new FormData();
+	datos.append("correoIngresado", correoIngresado);
+	
+	$.ajax({
+
+        url:"ajax/usuarios.ajax.php",
+        method: "POST",
+        data: datos,
+        cache: false,
+        contentType: false,
+        processData: false,  
+        dataType: "json",
+        success: function(respuesta) {
+			console.log('respuesta', respuesta);
+		}
+
+	})
+
+})
+
+
+
 //--------------------------------------------
 //Switch
 
@@ -99,3 +131,4 @@ if(localStorage.getItem('skin-white-mode') === 'true'){
     btnSwitch.classList.remove('active');
 
 }
+
