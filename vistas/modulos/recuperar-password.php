@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -159,6 +160,15 @@ CUERPO DOCUMENTO
           </div>
 
         </form>
+
+        <?php
+          error_reporting(0);
+          
+          $recuperarPassword = new ControladorUsuarios();
+          $recuperarPassword -> ctrRevisarCorreoUsuario();
+
+ 
+        ?>
 
       </div>
 

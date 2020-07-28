@@ -55,30 +55,27 @@ class AjaxUsuarios{
 
         echo json_encode($respuesta);
     }
-    
-    /*=============================================
-        REVISAR CORREO INGRESADO PARA RECUPERAR CONTRASEÑA
-    =============================================*/
-    public $correoIngresado;
 
-    public function ajaxRevisarCorreo(){
-        $item = "correo";
-        $valor = $this->correoIngresado;
-        $respuesta = ControladorUsuarios::ctrMostrarUsuarios($item, $valor);
- 
+    /*=============================================
+        REVISAR PREGUNTAS DE SEGURIDAD
+    =============================================*/
+    public $validarPreguntas;
+
+    public function ajaxValidarPreguntas(){
+
+        $item = "respuesta";
+        $valor = $this->validarPreguntas;
+        
+        $respuesta = ControladorUsuarios::ctrMostrarPreguntasPorUsuarios($item, $valor);
+
         echo json_encode($respuesta);
     }
+    
+
 
 }
 
-/*=============================================
-REVISAR CORREO INGRESADO PARA RECUPERAR CONTRASEÑA
-=============================================*/
-if(isset($_POST["ingCorreo"])){
-    $revisar = new AjaxUsuarios();
-    $revisar->correoIngresado = $_POST["ingCorreo"];
-    $revisar->ajaxRevisarCorreo();
-}
+
 
 /*=============================================
             EDITAR USUARIO
@@ -105,4 +102,12 @@ if(isset($_POST["validarUsuario"])){
     $valUsuario = new AjaxUsuarios();
     $valUsuario->validarUsuario = $_POST["validarUsuario"];
     $valUsuario->ajaxValidarUsuario();
+}
+/*=============================================
+    REVISAR PREGUNTAS DE SEGURIDAD
+=============================================*/
+if(isset($_POST["validarPreguntas"])){
+    $valPreguntas = new AjaxUsuarios();
+    $valPreguntas->validarPreguntas = $_POST["validarPreguntas"];
+    $valPreguntas->ajaxValidarPreguntas();
 }

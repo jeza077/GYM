@@ -145,9 +145,9 @@ $("#nuevoUsuario").change(function() {
         processData: false,  
         dataType: "json",
         success: function(respuesta) {
-            // console.log(respuesta);
+            console.log(respuesta);
 
-            if(respuesta) {//Si la Respuesta = false entonces...
+            if(respuesta) {//Si la Respuesta = true entonces...
                 //Mandamos una alerta diciendo que ya existe el usuario.
                 $("#nuevoUsuario").parent().after('<div class="alert alert-warning">Este usuario ya existe</div>');
                
@@ -191,4 +191,41 @@ $(".tablas").on("click", ".btnEliminarUsuario", function() {
         }
 
     });
+});
+
+/*=============================================
+    REVISAR PREGUNTAS DE SEGURIDAD
+=============================================*/
+$(".preguntas").change(function() { 
+
+    $(".alert").remove();
+
+    var preguntas = $(this).val();
+
+    var datos = new FormData();
+    datos.append("validarPreguntas", preguntas);
+
+    $.ajax({
+
+        url:"ajax/usuarios.ajax.php",
+        method: "POST",
+        data: datos,
+        cache: false,
+        contentType: false,
+        processData: false,  
+        dataType: "json",
+        success: function(respuesta) {
+            console.log(respuesta);
+
+            if(respuesta) {//Si la Respuesta = true entonces...
+                //Mandamos una alerta diciendo que ya existe el usuario.
+                $(".preguntas").parent().after('<div class="alert alert-warning">Este usuario ya existe</div>');
+               
+                //E inmeditamente Limpiamos el input
+                $(".preguntas").val("");
+            } 
+        }
+  
+    });
+    
 });

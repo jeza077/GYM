@@ -111,7 +111,7 @@ class ControladorUsuarios{
 											showConfirmButton: true,
 											confirmButtonText: "Cerrar",
 											closeOnConfirm: false
-
+											
 										})
 										</script>';
 								session_destroy();
@@ -537,8 +537,17 @@ class ControladorUsuarios{
 	/*=============================================
             RECUPERAR CONTRASEÑA DE USUARIO
 	=============================================*/	
+	static public function ctrMostrarPreguntasPorUsuarios($item, $valor) {
+		$item = "usuario";
+		$valor = $_SESSION['usuario'];
 
-	static public function ctrRecuperarPassword(){
+		$respuesta = ModeloUsuarios::mdlMostrarPreguntas($item, $valor);
+
+		return $respuesta;
+
+	}
+
+	static public function ctrRevisarCorreoUsuario(){
 
 		if(isset($_POST['ingCorreo'])){
 
@@ -547,29 +556,38 @@ class ControladorUsuarios{
 			$item = "correo";
 			$valor = $_POST["ingCorreo"];
 
-		
-
 			$respuesta = ModeloUsuarios::MdlMostrarUsuarios($tabla, $item, $valor);
 
 			if($respuesta['correo'] == $_POST['ingCorreo']) {
 
-				// $id = $respuesta['id'];
+				// session_start();
+				$_SESSION["id"] = $respuesta["id"];
+				$_SESSION["nombre"] = $respuesta["nombre"];
+				$_SESSION["usuario"] = $respuesta["usuario"];
+				$_SESSION["correo"] = $respuesta["correo"];
 
-			
+				echo '<script>
 
-			
+						swal({		
+							type: "success",
+							title: "Correcto!",
+							showConfirmButton: true,
+							confirmButtonText: "Cerrar",
+							closeOnConfirm: false
+							}).then((result)=>{
+    
+								if(result.value){
 
-				// echo '<script>
+									window.location = "preguntas";
 
-				// 		swal({		
-				// 			type: "success",
-				// 			title: "Correcto!",
-				// 			showConfirmButton: true,
-				// 			confirmButtonText: "Cerrar",
-				// 			closeOnConfirm: false
-				// 			})
+								}
 
-				// 	</script>';
+							});
+
+					</script>';
+
+
+
 			} else {
 				echo '<script>
 

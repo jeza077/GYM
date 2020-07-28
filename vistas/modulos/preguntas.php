@@ -1,8 +1,3 @@
-<?php
-error_reporting(E_ALL & ~E_NOTICE);
-session_start();
-
-?>
 
 <!DOCTYPE html>
 <html>
@@ -125,98 +120,86 @@ CUERPO DOCUMENTO
 ======================================-->
 
 <body class="hold-transition sidebar-collapse sidebar-mini login-page">
- 
-    <?php
 
-    if(isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok"){
+  <div class="wrapper content-password">
 
-    echo '<div class="wrapper">';
-
-      /*=============================================
-      CABEZOTE
-      =============================================*/
-
-      include "modulos/header.php";
-
-      /*=============================================
-      MENU
-      =============================================*/
-
-      include "modulos/menu.php";
-
-      /*=============================================
-      CONTENIDO
-      =============================================*/
-
-      if(isset($_GET["ruta"])){
-
-        if($_GET["ruta"] == "inicio" ||
-          $_GET["ruta"] == "usuarios" ||
-          $_GET["ruta"] == "categorias" ||
-          $_GET["ruta"] == "empleados" ||
-          $_GET["ruta"] == "productos" ||
-          $_GET["ruta"] == "clientes" ||
-          $_GET["ruta"] == "ventas" ||
-          $_GET["ruta"] == "crear-venta" ||
-          $_GET["ruta"] == "editar-venta" ||
-          $_GET["ruta"] == "reportes" ||
-          $_GET["ruta"] == "mensajeria" ||
-          $_GET["ruta"] == "proveedores" ||
-          $_GET["ruta"] == "auditoria" ||
-          $_GET["ruta"] == "configuracion" ||
-          $_GET["ruta"] == "salir"){
-
-          include "modulos/".$_GET["ruta"].".php";
-
-        }else{
-
-          include "modulos/404.php";
-
-        }
-
-      }else{
-
-        include "modulos/inicio.php";
-        
-
-      }
-
-      /*=============================================
-      FOOTER
-      =============================================*/
-
-      include "modulos/footer.php";
-
-      echo '</div>';
-
-    }else{
+<div class="img-responsive" id="back"></div>
 
 
+    <div class="login-box">
 
-        if($_GET["ruta"] == "recuperar-password" || $_GET["ruta"] == "preguntas"){
+      <div class="login-logo">
 
-          include "modulos/".$_GET["ruta"].".php";
-          // include "vistas/modulos/recuperar-password.php";  
+        <img src="vistas/img/plantilla/logo-blanco-bloque.png" class="img-responsive" style="padding:30px 100px 0px 100px">
+
+      </div>
+
+      <div class="login-box-body">
+
+        <p class="login-box-msg">Preguntas de Seguridad</p>
+
+        <form method="post">
+
+        <?php
+            $item = null;
+            $valor = null;
+
+            $preguntas = ControladorUsuarios::ctrMostrarPreguntasPorUsuarios($item, $valor);
+
+            $grupo_pregunta = array();
+            foreach ($preguntas as $value) {
+                
+                $usuario = $value["usuario"];
+                
+
+                $valores = array(
+                    'pregunta' => $value['pregunta'],
+                    'respuesta' => $value['respuesta']
+                );
+
+                foreach ($valores as $key => $value) {
+                    
+                }
+                $grupo_pregunta[$usuario][] = $valores;
+
+            }
+            // echo "<pre>";
+            // var_dump($grupo_pregunta);
+            // echo "</pre>";
           
-        } else {
+            foreach ($grupo_pregunta as $usua => $pregunta) { ?>
 
-          include "modulos/login.php";
+                <p><?php echo $usua ?></p>
 
-          return;
-          // include "404.php";
-        }
-      
+                <?php foreach ($pregunta as $pregun) { ?>
+                    <p><?php echo $pregun['pregunta'] ?></p>
+                    <input class="col-md-12 preguntas" type="text">
+                <?php } ?>
 
+           <?php } ?>
+        <br>
+        <hr>
 
-    }
+                <div class="row">
+
+                <div class="col-xs-12">
+    
+                    <button type="submit" class="btn btn-naranja btn-block btn-flat">Enviar</button>
+                
+                </div>
+    
+                </div>
+    
+            </form>
 
     
 
+      </div>
 
+    </div>
 
-    ?>
-
-
+  </div>
+  
 <script src="vistas/js/plantilla.js"></script>
 <script src="vistas/js/usuarios.js"></script>
 <script src="vistas/js/validaciones.js"></script>
