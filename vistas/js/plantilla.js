@@ -57,12 +57,16 @@ $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
 //Money Euro
 $('[data-mask]').inputmask()
 
+
+/*LOGIN PREVENIR RECARGAR */
+$(".verificarCorreo").on("click", function (event) {
+	event.preventDefault();
+});
+
 //--------------------------------------------
 //Switch
 
 const btnSwitch = document.querySelector('#switch');
-
-
 
 btnSwitch.addEventListener('click', () => {
 
