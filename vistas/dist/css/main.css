@@ -9,6 +9,7 @@
 .login-page {
     background: var(--primario);
     font-family: 'Poppins', sans-serif;
+    overflow: hidden;
 }
 /* .login-box{
     font-family: 'Poppins', sans-serif;
@@ -28,7 +29,7 @@
     position: relative;
     width: 400px;
     height: 500px;
-    margin: 8% 35%;
+    margin: 6.5% 35%;
     overflow: hidden;
     background: var(--secuandario);
     border-radius: 4px;
@@ -110,6 +111,20 @@
     transition: 0.5s;
 }
 
+/* CONTENEDOR: CAMBIAR CONTRASEÑA */
+.cambiarPassword{
+    left: 100%;
+}
+.login-box.changePassword .cambiarPassword{
+    left: 0;
+}
+.login-box.active.quest.changePassword .questionsBx{
+    left: 100%;
+}
+.login-box.active.quest.changePassword{
+    margin: 6.5% 35%;
+    height: 500px;
+}
 
 .main-header {
     position: fixed;

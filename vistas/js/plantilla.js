@@ -62,7 +62,9 @@ $('[data-mask]').inputmask()
 $(".verificarCorreo").on("click", function (event) {
 	event.preventDefault();
 });
-
+$(".verificarPreguntas").on("click", function (event) {
+	event.preventDefault();
+});
 //--------------------------------------------
 //Switch
 

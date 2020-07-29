@@ -7,7 +7,7 @@
   </div>
 
   <div class="login-box-body iniciarSesion">
-    <p class="login-box-msg">Ingresar al sistema</p>
+    <p class="login-box-msg">Ingresa al sistema</p>
     <form method="post">
       <div class="form-group has-feedback">
         <input type="text" class="form-control" placeholder="Usuario" name="ingUsuario" required>
@@ -41,7 +41,7 @@
   </div>
 
   <div class="login-box-body verificarEmail">
-    <p class="login-box-msg">Verificar correo</p>
+    <p class="login-box-msg">Verifica tu correo</p>
     <form method="post">
       <div class="form-group has-feedback">
         <input type="email" class="form-control" placeholder="Email" name="" required>
@@ -76,10 +76,32 @@
 
       <div class="row">    
         <div class="col-xs-12">
-          <button type="submit" class="btn btn-naranja btn-block btn-flat">Verificar</button>       
+          <button type="submit" class="btn btn-naranja btn-block btn-flat verificarPreguntas" onclick="toggelPassword();">Verificar</button>       
         </div>
         
         <p class="link">Regresar al <a href="#" onclick="toggelForm(); toggelQuestions();">Login</a></p>
+      </div>
+
+
+    </form>
+
+  </div>
+
+  <div class="login-box-body cambiarPassword">
+    <p class="login-box-msg">Cambia tu contraseña</p>
+    <form method="post">
+      <div class="form-group has-feedback">
+        <input type="password" class="form-control" placeholder="Nueva contraseña" name="" required>
+        <input type="password" class="form-control" placeholder="Confirmar contraseña" name="" required>
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+      </div>
+
+      <div class="row">    
+        <div class="col-xs-12">
+          <button type="submit" class="btn btn-naranja btn-block btn-flat">Verificar</button>       
+        </div>
+        
+        <p class="link">Regresar al <a href="#" onclick="toggelForm(); toggelQuestions(); toggelPassword();">Login</a></p>
       </div>
 
 
@@ -96,5 +118,9 @@
     function toggelQuestions(){
         var container = document.querySelector('.login-box');
         container.classList.toggle('quest')
+    }
+    function toggelPassword(){
+        var container = document.querySelector('.login-box');
+        container.classList.toggle('changePassword')
     }
 </script>
