@@ -32,12 +32,11 @@
     overflow: hidden;
     background: var(--secuandario);
     border-radius: 4px;
+    transition: 0.5s;
 }
 .login-page .login-box .login-box-body{
     position: absolute;
     width: 100%;
-    justify-content: center;
-    align-items: center;
     padding: 25px 30px 95px 30px;
     transition: 0.5s;
 }
@@ -101,7 +100,15 @@
 .login-box.active.quest .verificarEmail{
     left: 100%;
 }
-
+.login-box.active.quest{
+    margin: 5% 35%;
+    height: 550px;
+    /* width: 450px; */
+}
+.login-box.active.quest .login-box-body{
+    padding: 25px 35px 95px 35px;
+    transition: 0.5s;
+}
 
 
 .main-header {
