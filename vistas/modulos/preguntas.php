@@ -167,7 +167,7 @@ CUERPO DOCUMENTO
             // var_dump($grupo_pregunta);
             // echo "</pre>";
           
-            foreach ($grupo_pregunta as $usua => $pregunta) { ?>
+            foreach ($grupo_pregunta as $usua => $pregunta) : ?>
 
                 <p><?php echo $usua ?></p>
 
@@ -176,7 +176,7 @@ CUERPO DOCUMENTO
                     <input class="col-md-12 preguntas" type="text">
                 <?php } ?>
 
-           <?php } ?>
+                <?php endforeach; ?>
         <br>
         <hr>
 

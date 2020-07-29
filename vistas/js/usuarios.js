@@ -208,7 +208,7 @@ $(".preguntas").change(function() {
     $.ajax({
 
         url:"ajax/usuarios.ajax.php",
-        method: "POST",
+        method: "GET",
         data: datos,
         cache: false,
         contentType: false,
@@ -217,13 +217,13 @@ $(".preguntas").change(function() {
         success: function(respuesta) {
             console.log(respuesta);
 
-            if(respuesta) {//Si la Respuesta = true entonces...
-                //Mandamos una alerta diciendo que ya existe el usuario.
-                $(".preguntas").parent().after('<div class="alert alert-warning">Este usuario ya existe</div>');
+            // if(respuesta) {//Si la Respuesta = true entonces...
+            //     //Mandamos una alerta diciendo que ya existe el usuario.
+            //     $(".preguntas").parent().after('<div class="alert alert-warning">Este usuario ya existe</div>');
                
-                //E inmeditamente Limpiamos el input
-                $(".preguntas").val("");
-            } 
+            //     //E inmeditamente Limpiamos el input
+            //     $(".preguntas").val("");
+            // } 
         }
   
     });
