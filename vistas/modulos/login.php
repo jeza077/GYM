@@ -65,8 +65,11 @@
     <p class="login-box-msg">Preguntas de Seguridad</p>
     <form method="post">
       <div class="form-group has-feedback">
+        <label for="">¿Pregunta?</label>
         <input type="text" class="form-control" placeholder="..." name="" required>
+        <label for="">¿Pregunta?</label>
         <input type="text" class="form-control" placeholder="..." name="" required>
+        <label for="">¿Pregunta?</label>
         <input type="text" class="form-control" placeholder="..." name="" required>
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
