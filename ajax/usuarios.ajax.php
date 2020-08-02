@@ -41,14 +41,30 @@ class AjaxUsuarios{
     }
 
     /*=============================================
-        REVISAR QUE EL USUARIO NO SE REPITA
+    REVISAR QUE EL USUARIO NO SE REPITA
     =============================================*/
+    
     public $validarUsuario;
 
     public function ajaxValidarUsuario(){
 
         $item = "usuario";
         $valor = $this->validarUsuario;
+        
+        $respuesta = ControladorUsuarios::ctrMostrarUsuarios($item, $valor);
+
+        echo json_encode($respuesta);
+    }
+    /*=============================================
+    REVISAR CORREO
+    =============================================*/
+    
+    public $verificarEmail;
+
+    public function ajaxVerificarEmail(){
+
+        $item = "correo";
+        $valor = $this->verificarEmail;
         
         $respuesta = ControladorUsuarios::ctrMostrarUsuarios($item, $valor);
 
@@ -83,4 +99,13 @@ if(isset($_POST["validarUsuario"])){
     $valUsuario = new AjaxUsuarios();
     $valUsuario->validarUsuario = $_POST["validarUsuario"];
     $valUsuario->ajaxValidarUsuario();
+}
+
+/*=============================================
+    REVISAR CORREO
+=============================================*/
+if(isset($_POST["verificarEmail"])){
+    $valUsuario = new AjaxUsuarios();
+    $valUsuario->verificarEmail = $_POST["verificarEmail"];
+    $valUsuario->ajaxVerificarEmail();
 }

@@ -58,13 +58,6 @@ $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
 $('[data-mask]').inputmask()
 
 
-/*LOGIN PREVENIR RECARGAR */
-$(".verificarCorreo").on("click", function (event) {
-	event.preventDefault();
-});
-$(".verificarPreguntas").on("click", function (event) {
-	event.preventDefault();
-});
 //--------------------------------------------
 //Switch
 

@@ -44,13 +44,13 @@
     <p class="login-box-msg">Verifica tu correo</p>
     <form method="post">
       <div class="form-group has-feedback">
-        <input type="email" class="form-control" placeholder="Email" name="" required>
+        <input type="email" class="form-control"  id="verificarEmail" placeholder="Email" name="" required>
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
 
       <div class="row">    
         <div class="col-xs-12">
-          <button type="submit" class="btn btn-naranja btn-block btn-flat verificarCorreo" onclick="toggelQuestions();">Verificar</button>       
+          <button type="submit" class="btn btn-naranja btn-block btn-flat verificarCorreo">Verificar</button>       
         </div>
         
         <p class="link">Regresar al <a href="#" onclick="toggelForm();">Login</a></p>
