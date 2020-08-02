@@ -531,7 +531,19 @@ class ControladorUsuarios{
 			}
 		}
 	}
+
+	/*=============================================
+                MOSTRAR PREGUNTAS
+	=============================================*/	
+
+
+static public function ctrMostrarPreguntas($item, $valor) {
+
+	// $tabla = "usuarios";
+	$respuesta = ModeloUsuarios::mdlMostrarPreguntas($item, $valor);
+
+	return $respuesta;
+
+}
 }
 	
-
-

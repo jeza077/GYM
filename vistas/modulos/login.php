@@ -64,19 +64,19 @@
   <div class="login-box-body questionsBx">
     <p class="login-box-msg">Preguntas de Seguridad</p>
     <form method="post">
-      <div class="form-group has-feedback">
-        <label for="">¿Pregunta?</label>
+      <div class="form-group has-feedback" id="preguntaSeguridad">
+        <!-- <label for="">¿Pregunta?</label>
         <input type="text" class="form-control" placeholder="..." name="" required>
         <label for="">¿Pregunta?</label>
         <input type="text" class="form-control" placeholder="..." name="" required>
         <label for="">¿Pregunta?</label>
         <input type="text" class="form-control" placeholder="..." name="" required>
-        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+        <span class="glyphicon glyphicon-user form-control-feedback"></span> -->
       </div>
 
       <div class="row">    
         <div class="col-xs-12">
-          <button type="submit" class="btn btn-naranja btn-block btn-flat verificarPreguntas" onclick="toggelPassword();">Verificar</button>       
+          <button type="submit" class="btn btn-naranja btn-block btn-flat verificarPreguntas" id="verificarPreguntas">Verificar</button>       
         </div>
         
         <p class="link">Regresar al <a href="#" onclick="toggelForm(); toggelQuestions();">Login</a></p>
