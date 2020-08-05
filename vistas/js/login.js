@@ -38,7 +38,7 @@ $("#verificarEmail").change(function() {
         processData: false,  
         dataType: "json",
         success: function(respuesta) {
-            console.log(respuesta);
+            // console.log(respuesta);
             
             if(!respuesta) {//Si la Respuesta = FALSE entonces...
                 //Mandamos una alerta diciendo que ya existe el usuario.
@@ -69,27 +69,47 @@ $("#verificarEmail").change(function() {
                     success: function(respuesta) {
                         // console.log(respuesta);
 
+                        
+                        var arrayPreguntas = [];
                         for(var i in respuesta){
                             // console.log(respuesta[i][2]);
                             
                             $("#preguntaSeguridad").append("<label>" + respuesta[i][1] + "</label>");
                             $("#preguntaSeguridad").append("<input type='text' class='form-control respuestaPregunta' placeholder='Agrega la respuesta' required>")
                         
-                            var respuestaPregunta = respuesta[i][2];
-                            console.log(respuestaPregunta);
-    
-                            $("#verificarPreguntas").on("click", function (event) {
-                                event.preventDefault();
                             
-                                var respuestaPreguntaAgregada = $(".respuestaPregunta").val();
-                            
-                                if(respuestaPregunta === respuestaPreguntaAgregada){
-                                    console.log("CORRECTO");
-                                } else {
-                                    console.log("mal");
-                                }
-                            });
+                                respuestaPregunta = respuesta[i][2];
+                                
+                                arrayPreguntas.push = respuestaPregunta;
+                                console.log(arrayPreguntas);
                         }
+                            
+
+
+                                $("#verificarPreguntas").on("click", function (event) {
+                                    event.preventDefault();
+                                
+                                    var arrayPreguntas = new Array();
+                                    var respuestaPreguntaAgregada = $('.respuestaPregunta'), 
+                                    namesValues = [].map.call(respuestaPreguntaAgregada, function(respuestaPregunta){  
+                                        arrayPreguntas.push(respuestaPregunta.value);
+                                    });
+
+                                    console.log(arrayPreguntas);
+
+                                    // arrayPreguntas.forEach(function(inputRespuestaPregunta){
+
+                                    //     console.log(inputRespuestaPregunta);
+                                    //     if(respuestaPregunta == inputRespuestaPregunta){
+                                    //         console.log("CORRECTO");
+                                    //     } else {
+                                    //         console.log("mal");
+                                    //     }
+                                    // });
+    
+    
+                                
+                                });
                         
                       
                         
