@@ -115,19 +115,36 @@ $("#verificarEmail").change(function() {
 
                                             $("#cambiarPassword").prepend("<div class='form-group has-feedback'>",
                                                     "<input type='password' class='form-control' placeholder='Nueva contraseña' name='editarPassword' required>",
-                                                    "<input type='password' class='form-control' placeholder='Confirmar contraseña'>",
+                                                    "<input type='password' class='form-control' id='confirmar_password' placeholder='Confirmar contraseña'>",
+                                                    "<span class='help-block' id='resultado_password'></span>",
                                                     "<input type='hidden' id='passwordActual' name='passwordActual'>",
                                                 "</div>",
 
                                                 )
 
                                                 //CAMBIAR CONTRASEÑA
+                                                
                                                 $("input[name='editarPassword']").on('change', function(){
                                                     cambiarPass = $(this).val();
                                                 });
+                                                $("#confirmar_password").on('input', function(){
+                                                    // var password_nuevo = cambiarPass;
+                                                    if($(this).val() == cambiarPass){
+                                                        $('#resultado_password').text('Correcto');
+                                                        $('#resultado_password').parents('.form-group').addClass('has-success').removeClass('has-error');
+                                                        $("input[name='editarPassword']").parents('.form-group').addClass('has-success').removeClass('has-error');
+                                                        // $('#crear_registro_admin').attr('disabled', false);  
+                                                    } else {
+                                                        $('#resultado_password').text('No son iguales');
+                                                        $('#resultado_password').parents('.form-group').addClass('has-error').removeClass('has-success');
+                                                        $("input[name='editarPassword']").parents('.form-group').addClass('has-error').removeClass('has-success');
+                                                        // $('#crear_registro_admin').attr('disabled', true);
+                                                    }
+                                                })
+                                                
                                                     $("#cambiarContraseña").on("click", function(event){  
                                                         event.preventDefault();
-                                                        console.log("clickkkk")
+                                                        // console.log("clickkkk")
 
                                                         var datos = new FormData();
                                                         datos.append("usuarioId", idUsuario);
@@ -143,13 +160,32 @@ $("#verificarEmail").change(function() {
                                                             processData: false,  
                                                             dataType: "json",
                                                             success: function(respuesta) {
-                                                                // console.log(respuesta)
-                                                            //    fetch(`http://localhost/pos/controladores/usuarios.controlador.php`)
-                                                            //    .then(respuesta => console.log(respuesta[0]))
+                                                                if(respuesta == 'ok'){
+                                                                    swal({
+                
+                                                                        type: "success",
+                                                                        title: "¡Contraseña cambiada correctamente!",
+                                                                        showConfirmButton: true,
+                                                                        confirmButtonText: "Cerrar",
+                                                                        closeOnConfirm: false
+                                                                    }).then((result)=>{
+    
+                                                                        if(result.value){
+                                                
+                                                                            toggelForm(); 
+                                                                            toggelQuestions();
+                                                                            toggelPassword();
+                                                
+                                                                        }
+                                                
+                                                                    });
+                                                                }
+                                                    
                                                             }
                                                     
                                                         })
                                                     })
+
                                         } else {
                                             swal({		
                                 
@@ -176,33 +212,5 @@ $("#verificarEmail").change(function() {
     })
     
 });
-
-// //CAMBIAR CONTRASEÑA
-// $("#cambiarContraseña").on("click", function(event){  
-// 	event.preventDefault();
-//     console.log("clickkkk")
-
-    
-
-
-//     var datos = new FormData();
-//     datos.append("usuarioId", idUsuario);
-//     // datos.append("activarUsuario", estadoUsuario);
-
-//     $.ajax({
-
-//         url:"ajax/usuarios.ajax.php",
-//         method: "POST",
-//         data: datos,
-//         cache: false,
-//         contentType: false,
-//         processData: false,  
-//         dataType: "json",
-//         success: function(respuesta) {
-//             console.log(respuesta)
-//         }
-  
-//     })
-// })
 
 

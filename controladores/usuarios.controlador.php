@@ -570,38 +570,37 @@ class ControladorUsuarios{
 
 				// $respuesta = ModeloUsuarios::mdlCambiarContraseña($tabla, $valor);
 				$respuesta = ModeloUsuarios::mdlActualizarUsuario($tabla, $item1, $valor1, $item2, $valor2);
-				// json_encode($respuesta);
+				return $respuesta;
+			
+				// if($respuesta == "ok"){
+				// 	echo '<script>
 
-				// echo $respuesta;
-				if($respuesta == "ok"){
-					echo '<script>
-
-					swal({
+				// 	swal({
 						
-						type: "success",
-						title: "¡Contraseña cambiada!",
-						showConfirmButton: true,
-						confirmButtonText: "Cerrar",
-						closeOnConfirm: false
-						})
+				// 		type: "success",
+				// 		title: "¡Contraseña cambiada!",
+				// 		showConfirmButton: true,
+				// 		confirmButtonText: "Cerrar",
+				// 		closeOnConfirm: false
+				// 		})
 
 
-						</script>';
-				} else {
-					echo '<script>
+				// 		</script>';
+				// } else {
+				// 	echo '<script>
 
-					swal({
+				// 	swal({
 						
-						type: "error",
-						title: "¡Error!",
-						showConfirmButton: true,
-						confirmButtonText: "Cerrar",
-						closeOnConfirm: false
-						})
+				// 		type: "error",
+				// 		title: "¡Error!",
+				// 		showConfirmButton: true,
+				// 		confirmButtonText: "Cerrar",
+				// 		closeOnConfirm: false
+				// 		})
 
 
-						</script>';
-				}
+				// 		</script>';
+				// }
 
 			} else {
 
