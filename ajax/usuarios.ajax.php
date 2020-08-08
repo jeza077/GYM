@@ -87,6 +87,27 @@ class AjaxUsuarios{
         echo json_encode($respuesta);
     }
 
+    /*=============================================
+            CAMBIAR CONTRASEÑA
+    =============================================*/
+    public $usuarioId;
+    public $cambiarPass;
+
+    public function ajaxCambiarContraseña(){
+
+        // $tabla = "usuarios";
+
+        $post = $this->cambiarPass;
+
+        $item = "id";
+        $valor = $this->usuarioId;
+      
+        $respuesta = ControladorUsuarios::ctrCambiarContraseña($item, $valor, $post);
+
+        echo json_encode($respuesta);
+
+    }
+    
 
 }
 
@@ -134,4 +155,13 @@ if(isset($_POST["email"])){
     $valUsuario = new AjaxUsuarios();
     $valUsuario->email = $_POST["email"];
     $valUsuario->ajaxMostrarPreguntas();
+}
+/*=============================================
+           CAMBIAR CONTRASEÑA
+=============================================*/
+if(isset($_POST["usuarioId"])){
+    $cambiarContraseña = new AjaxUsuarios();
+    $cambiarContraseña->usuarioId = $_POST["usuarioId"];
+    $cambiarContraseña->cambiarPass = $_POST["cambiarPass"];
+    $cambiarContraseña->ajaxCambiarContraseña();
 }
