@@ -81,6 +81,17 @@
       <div class='form-group has-feedback' id="passwords">
 
       </div>
+      <div class="con_info">
+        <h4>La contraseña debe cumplir con los siguientes requerimientos:</h4>
+        <ul>
+          <li class="letter">Al menos debe tener <strong>una letra</strong></li>
+          <li class="capital">Al menos debe tener <strong>una letra en mayuscula</strong></li>
+          <li class="number">Al menos debe tener <strong>un numero</strong></li>
+          <li class="special">Al menos debe tener <strong>un caracter especial</strong></li>
+          <li class="length">Al menos debe tener <strong>8 caracteres como minimo y 16 maximo</strong></li>
+        </ul>
+      </div>
+      
       <div class="row" id="linkLogin">    
           <div class="col-xs-12" id="btnCambiarPass">
 

@@ -21,7 +21,53 @@ function toggelPassword(){
     container.classList.toggle('changePassword')
 }
 
-
+function editarPassword(){  
+    $("#nueva_password").keyup(function() { 
+        var editPassword = $("#nueva_password").val();
+        // console.log(editPassword);
+    
+        //validar longitud
+        if(editPassword < 8){
+            $(".length").removeClass('valid').addClass('invalid');
+        }else if(editPassword.length > 16) {
+            $(".length").removeClass('valid').addClass('invalid');
+        } else {
+            $(".length").removeClass('invalid').addClass('valid');
+        }
+    
+        //validar que tenga una letra
+        if(editPassword.match(/[A-z]/)){
+            $(".letter").removeClass('invalid').addClass('valid');
+        } else {
+            $(".letter").removeClass('valid').addClass('invalid');
+        }
+    
+        //validar que tenga una letra Mayuscula
+        if(editPassword.match(/[A-Z]/)){
+            $(".capital").removeClass('invalid').addClass('valid');
+        } else {
+            $(".capital").removeClass('valid').addClass('invalid');
+        }
+    
+        //validar que tenga un numero
+        if(editPassword.match(/\d/)){
+            $(".number").removeClass('invalid').addClass('valid');
+        } else {
+            $(".number").removeClass('valid').addClass('invalid');
+        }
+    
+        //validar que tenga un caracter especial
+        if(editPassword.match(/[!@#$&*.,]/)){
+            $(".special").removeClass('invalid').addClass('valid');
+        } else {
+            $(".special").removeClass('valid').addClass('invalid');
+        }
+    }).focus(function() {  
+        $(".con_info").show();
+    }).blur(function() { 
+        $(".con_info").hide();
+    });
+}
 //VERIFICAR SI EL CORREO ESTA ASOCIADO A UN USUARIO
 $("#verificarEmail").change(function() { 
     
@@ -110,7 +156,7 @@ $("#verificarEmail").change(function() {
                                         var respuestaString = respuestasRegistradas.toString();
 
                                         if(preguntaString == respuestaString){
-                                            console.log("CORRECTO");
+                                            // console.log("CORRECTO");
                                             toggelPassword();
 
                                             $("#passwords").append("<input type='password' class='form-control' id='nueva_password' placeholder='Nueva contraseña' name='editarPassword' required>",
@@ -122,7 +168,7 @@ $("#verificarEmail").change(function() {
                                             $("#linkLogin").append("<p class='link'>Regresar al <a href='#' onclick='toggelForm(); toggelQuestions(); toggelPassword();'>Login</a></p>")
 
                                                 //CAMBIAR CONTRASEÑA
-                                                
+                                                editarPassword();
                                                 $("input[name='editarPassword']").on('change', function(){
                                                     cambiarPass = $(this).val();
                                                 });
