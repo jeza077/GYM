@@ -113,14 +113,13 @@ $("#verificarEmail").change(function() {
                                             console.log("CORRECTO");
                                             toggelPassword();
 
-                                            $("#cambiarPassword").prepend("<div class='form-group has-feedback'>",
-                                                    "<input type='password' class='form-control' placeholder='Nueva contraseña' name='editarPassword' required>",
-                                                    "<input type='password' class='form-control' id='confirmar_password' placeholder='Confirmar contraseña'>",
-                                                    "<span class='help-block' id='resultado_password'></span>",
-                                                    "<input type='hidden' id='passwordActual' name='passwordActual'>",
-                                                "</div>",
+                                            $("#passwords").append("<input type='password' class='form-control' id='nueva_password' placeholder='Nueva contraseña' name='editarPassword' required>",
+                                            "<input type='password' class='form-control' id='confirmar_password' placeholder='Confirmar contraseña'>",
+                                            "<span class='help-block' id='resultado_password'></span>")
+                                            
+                                            $("#btnCambiarPass").append("<button type='submit' class='btn btn-naranja btn-block btn-flat', id='cambiarContraseña' disabled='disabled'>Cambiar Contraseña</button>")
 
-                                                )
+                                            $("#linkLogin").append("<p class='link'>Regresar al <a href='#' onclick='toggelForm(); toggelQuestions(); toggelPassword();'>Login</a></p>")
 
                                                 //CAMBIAR CONTRASEÑA
                                                 
@@ -132,13 +131,11 @@ $("#verificarEmail").change(function() {
                                                     if($(this).val() == cambiarPass){
                                                         $('#resultado_password').text('Correcto');
                                                         $('#resultado_password').parents('.form-group').addClass('has-success').removeClass('has-error');
-                                                        $("input[name='editarPassword']").parents('.form-group').addClass('has-success').removeClass('has-error');
-                                                        // $('#crear_registro_admin').attr('disabled', false);  
+                                                        $('#cambiarContraseña').attr('disabled', false);  
                                                     } else {
                                                         $('#resultado_password').text('No son iguales');
                                                         $('#resultado_password').parents('.form-group').addClass('has-error').removeClass('has-success');
-                                                        $("input[name='editarPassword']").parents('.form-group').addClass('has-error').removeClass('has-success');
-                                                        // $('#crear_registro_admin').attr('disabled', true);
+                                                        $('#cambiarContraseña').attr('disabled', true);
                                                     }
                                                 })
                                                 

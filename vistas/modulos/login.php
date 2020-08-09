@@ -75,30 +75,26 @@
   </div>
 
   <div class="login-box-body cambiarPassword" >
-  
     <p class="login-box-msg">Cambia tu contraseña</p>
     <form method="post" id="cambiarPassword">
 
-    <!-- <div class='form-group has-feedback'>
-      <input type='password' class='form-control' id='pass' placeholder='Nueva contraseña' name='editarPassword'>
-    </div> -->
-    <div class="row">    
-        <div class="col-xs-12">
-        <button type="submit" class="btn btn-naranja btn-block btn-flat" id="cambiarContraseña">Cambiar Contraseña</button>
-        </div>
-        
-        <p class="link">Regresar al <a href="#" onclick="toggelForm(); toggelQuestions(); toggelPassword();">Login</a></p>
-    </div>
-    <?php
+      <div class='form-group has-feedback' id="passwords">
 
+      </div>
+      <div class="row" id="linkLogin">    
+          <div class="col-xs-12" id="btnCambiarPass">
 
-      $cambiarContraseña = new ControladorUsuarios();
-      $cambiarContraseña -> ctrCambiarContraseña($item, $valor, $post);
+          </div>  
+      </div>
 
-    ?>
+      <?php
+        $item = null; 
+        $valor = null;
+        $post = null;
+        $cambiarContraseña = new ControladorUsuarios();
+        $cambiarContraseña -> ctrCambiarContraseña($item, $valor, $post);
+      ?>
     </form>
-
-
   </div>
 
 </div>
